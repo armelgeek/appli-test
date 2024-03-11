@@ -65,3 +65,13 @@ model Product {
   orders      Order[]
   updatedAt   DateTime @updatedAt
 }
+
+model Bankroll {
+  capital     Decimal?
+  createdAt   DateTime @default(now())
+  description String?
+  devise      String?
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  updatedAt   DateTime @updatedAt
+}
